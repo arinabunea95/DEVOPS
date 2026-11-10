@@ -101,84 +101,84 @@ def calculate_statistics():
 
 # Exemplu utilizare
 
-# Cream doi studenti
 if __name__ == "__main__":
 
     print("\n" + "=" * 50)
     print("        PROJECT ACADEMY DEMO")
     print("=" * 50 + "\n")
 
-s1 = Student(1, "Alice", 20)
-s2 = Student(2, "Bob", 17)
+    # Cream doi studenti
+    s1 = Student(1, "Alice", 20)
+    s2 = Student(2, "Bob", 17)
 
-print("Au fost creati 2 studenti.")
-print(f"Student 1: {s1.name}, Age: {s1.age}")
-print(f"Student 2: {s2.name}, Age: {s2.age}")
-
-
-print("\nAdaugam note pentru Alice")
-s1.add_grade(8)
-s1.add_grade(10)
-print(f"Grades Alice: {s1.grades}")
+    print("Au fost creati 2 studenti.")
+    print(f"Student 1: {s1.name}, Age: {s1.age}")
+    print(f"Student 2: {s2.name}, Age: {s2.age}")
 
 
-print("\nAdaugam note pentru Bob")
-s2.add_grade(4)
-s2.add_grade(5)
-print(f"Grades Bob: {s2.grades}")
+    print("\nAdaugam note pentru Alice")
+    s1.add_grade(8)
+    s1.add_grade(10)
+    print(f"Grades Alice: {s1.grades}")
 
 
-print("\nAdaugam studentii in lista principala")
-add_student(s1)
-add_student(s2)
-print(f"Total students: {len(students)}")
+    print("\nAdaugam note pentru Bob")
+    s2.add_grade(4)
+    s2.add_grade(5)
+    print(f"Grades Bob: {s2.grades}")
 
 
-print("\nCalculam mediile")
-print(f"Alice average: {s1.average_grade()}")
-print(f"Bob average: {s2.average_grade()}")
+    print("\nAdaugam studentii in lista principala")
+    add_student(s1)
+    add_student(s2)
+    print(f"Total students: {len(students)}")
 
 
-print("\nVerificam daca studentii au promovat")
-print(f"Alice passed: {s1.is_passing()}")
-print(f"Bob passed: {s2.is_passing()}")
+    print("\nCalculam mediile")
+    print(f"Alice average: {s1.average_grade()}")
+    print(f"Bob average: {s2.average_grade()}")
 
 
-print("\nCautam studentul cu ID 1")
-student = find_student(1)
-if student:
-    print(f"Student found: {student.name}")
+    print("\nVerificam daca studentii au promovat")
+    print(f"Alice passed: {s1.is_passing()}")
+    print(f"Bob passed: {s2.is_passing()}")
 
 
-print("\nCautam studentul cu ID 999")
-student = find_student(999)
-if student:
-    print(f"Student found: {student.name}")
-else:
-    print("Student not found")
+    print("\nCautam studentul cu ID 1")
+    student = find_student(1)
+    if student:
+        print(f"Student found: {student.name}")
 
 
-print("\nAfisam cursurile")
-for course, teacher in courses.items():
-    print(f"{course} -> {teacher}")
+    print("\nCautam studentul cu ID 999")
+    student = find_student(999)
+    if student:
+        print(f"Student found: {student.name}")
+    else:
+        print("Student not found")
 
 
-print("\nAfisam tuple-ul de cursuri valide")
-for course in valid_courses:
-    print(course)
+    print("\nAfisam cursurile")
+    for course, teacher in courses.items():
+        print(f"{course} -> {teacher}")
 
 
-print("\nCalculam statistici")
-stats = calculate_statistics()
-print(f"Total students: {stats['total_students']}")
-print(f"Average age: {stats['average_age']}")
+    print("\nAfisam tuple-ul de cursuri valide")
+    for course in valid_courses:
+        print(course)
 
 
-print("\nDeterminam cel mai bun student")
-top = get_top_student()
-print(f"Top student: {top.name}")
+    print("\nCalculam statistici")
+    stats = calculate_statistics()
+    print(f"Total students: {stats['total_students']}")
+    print(f"Average age: {stats['average_age']}")
 
 
-print("\nStergem studentul Bob")
-remove_student(2)
-print(f"Students left: {len(students)}")
+    print("\nDeterminam cel mai bun student")
+    top = get_top_student()
+    print(f"Top student: {top.name}")
+
+
+    print("\nStergem studentul Bob")
+    remove_student(2)
+    print(f"Students left: {len(students)}")
