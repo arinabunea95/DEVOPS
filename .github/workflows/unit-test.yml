@@ -16,4 +16,6 @@ jobs:
           python-version: '3.12'
 
       - name: Run unit tests
-        run: python -m unittest test_python_project.py
+        run: |
+          cd python_project
+          python -m unittest test_python_project.py
