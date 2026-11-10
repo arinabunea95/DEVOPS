@@ -16,6 +16,12 @@ from python_project import (
 
 
 class TestStudentProject(unittest.TestCase):
+    
+    @classmethod
+    def setUpClass(cls):
+        print("\n" + "=" * 50)
+        print("         UNIT TEST EXECUTION")
+        print("=" * 50 + "\n")
 
     def setUp(self):
         print("\n========== NEW TEST ==========")
