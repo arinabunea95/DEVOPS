@@ -17,5 +17,5 @@ jobs:
 
       - name: Run unit tests
         run: |
-          cd academy_project
+          cd python_project
           python -m unittest test_academy_project.py
