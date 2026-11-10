@@ -1,9 +1,3 @@
-if __name__ == "__main__":
-
-    print("\n" + "=" * 50)
-    print("        PROJECT ACADEMY DEMO")
-    print("=" * 50 + "\n")
-
 class Student:
     school_name = "Python Academy"
 
@@ -108,7 +102,11 @@ def calculate_statistics():
 # Exemplu utilizare
 
 # Cream doi studenti
-print("\n\n ==== PROJECT ACADEMY ====\n\n")
+if __name__ == "__main__":
+
+    print("\n" + "=" * 50)
+    print("        PROJECT ACADEMY DEMO")
+    print("=" * 50 + "\n")
 
 s1 = Student(1, "Alice", 20)
 s2 = Student(2, "Bob", 17)
