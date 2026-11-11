@@ -38,7 +38,7 @@ class TestStudentProject(unittest.TestCase):
 
         self.assertEqual(student.student_id, 1)
         self.assertEqual(student.name, "Alice")
-        self.assertEqual(student.age, 20)
+        self.assertEqual(student.age, 30)  # This will fail, as the age is set to 20
         self.assertEqual(student.grades, [])
 
     def test_add_valid_grade(self):
